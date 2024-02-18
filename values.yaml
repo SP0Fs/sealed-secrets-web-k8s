@@ -5,6 +5,7 @@ ingress:
   className: nginx
   annotations: 
     cert-manager.io/cluster-issuer: ca-issuer
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
     nginx.ingress.kubernetes.io/auth-tls-verify-client: "on"
     nginx.ingress.kubernetes.io/auth-tls-secret: "ingress-nginx/spof-cert"
     nginx.ingress.kubernetes.io/auth-tls-verify-depth: "1"
@@ -19,3 +20,5 @@ ingress:
   tls:
     - hosts:
       -  sealed-secrets.spof.tech
+      
+  https: true
