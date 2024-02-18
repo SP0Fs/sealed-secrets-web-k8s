@@ -20,5 +20,4 @@ ingress:
   tls:
     - hosts:
       -  sealed-secrets.spof.tech
-      
-  https: true
+      secretName: sealed-secrets-web-certs
