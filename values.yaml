@@ -16,8 +16,7 @@ ingress:
       paths:
       - path: /
         pathType: Prefix
-      
   tls:
-    - hosts:
+    hosts:
       -  sealed-secrets.spof.tech
-      secretName: sealed-secrets-web-certs
+    secretName: sealed-secrets-web-certs
